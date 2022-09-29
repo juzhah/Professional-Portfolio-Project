@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-import { AppWrap } from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 
 import ReactTooltip from 'react-tooltip';
 
@@ -80,4 +80,8 @@ function Skills() {
   );
 }
 
-export default AppWrap(Skills, 'skills');
+export default AppWrap(
+  MotionWrap(Skills, 'app__skills'),
+  'skills',
+  "app__whitebg"
+);
